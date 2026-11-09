@@ -46,11 +46,10 @@ becomes one continuous clip instead of overlapping copies.
 
 
 
-OTHER EDITORS
+VIDEO EDITORS
 -------------
-The .xml is in the Final Cut Pro 7 XML format, which DaVinci Resolve can
-also import (File > Import > Timeline). Set the Resolve project's frame
-rate to match your recording before importing.
+The .xml is in the Final Cut Pro 7 XML format, which Adobe Premiere and DaVinci Resolve can
+also import.
 
 
 TIPS
