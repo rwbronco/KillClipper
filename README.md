@@ -1,4 +1,6 @@
-============
+# Kill Clipper
+
+![KillClipper](https://github.com/rwbronco/KillClipper/blob/main/Kill_Clipper-screenshot.png)
 
 
 Kill Clipper is a small Windows app that cuts long Battlefield 6 gameplay recordings down to just the kills. Give it an .mp4 or .mkv, and it uses NumPy and FFmpeg to detect kills. You can quickly preview every kill and uncheck any you don’t want to keep or that it incorrectly identified. Each kill becomes a clip with your chosen number of seconds before and after, with overlapping kills being merged. Save the result as a Final Cut Pro 7 XML file and Adobe Premiere Pro or DaVinci Resolve opens it as a ready-cut sequence linked to your original video. It runs on Python 3 using Tkinter (included with Python) for the window, plus two add-ons installed by the setup file: numpy for the image analysis, and imageio-ffmpeg, which supplies a built-in copy of FFmpeg for reading video. It writes no temporary files; everything happens in memory.
