@@ -38,11 +38,8 @@ USING IT
 9. In Premiere: File > Import, choose the .xml. A new sequence appears,
    already cut down to just the kills, using your original footage.
 
-The preview window can be resized, and you can drag the divider between the
-options and the preview. The picture scales to fit.
 
-Kills close together are merged into one clip, so a double or triple kill
-becomes one continuous clip instead of overlapping copies.
+
 
 
 
@@ -56,6 +53,10 @@ TIPS
 ----
 - You can also drag a video onto "2 - Run Kill Clipper.bat" (or onto
   your shortcut) to open Kill Clipper with that video already loaded.
+- Kills close together are merged into one clip, so a double or triple kill
+  becomes one continuous clip instead of overlapping copies.
+- The preview window can be resized, and you can drag the divider between the
+  options and the preview. The picture scales to fit.
 - The detector expects the crosshair at the centre of the screen and the X
   to be red. If a colour-blind or HUD colour setting changes its colour,
   it won't be found.
