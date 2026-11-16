@@ -29,58 +29,60 @@ Scanning and playback write no temporary files; everything happens in memory.
 
 ============
 
-FIRST-TIME SETUP
-----------------
-1. Make sure Python is installed (https://www.python.org/downloads/).
-   When installing, tick "Add python.exe to PATH".
-2. Double-click  "1 - Setup (run once).bat"  and wait for "All done!".
+KILL CLIPPER 2
+==============
+Finds every kill in a Battlefield 6 recording (.mp4 or .mkv) and plays the
+video back showing ONLY the kills. Nothing is cut or re-saved: it plays your
+original file and jumps over everything between kills. You can still save a
+Premiere / Resolve sequence (XML) whenever you want to edit.
 
+FIRST TIME
+1. Install Python from https://www.python.org/downloads/ (64-bit) and tick
+   "Add python.exe to PATH" on the first installer screen.
+2. Double-click "1 - Setup (run once).bat". It installs three add-ons
+   (numpy, imageio-ffmpeg, py7zr) and downloads the video player
+   (libmpv-2.dll, about 30 MB) into this folder.
 
 USING IT
---------
-1. Double-click  "2 - Run Kill Clipper.bat".
-2. Choose your gameplay video (the file your video editor will use):
-   drag it onto the Kill Clipper window, or click Browse...
-3. Pick the Audio track you want in the Premiere sequence (Track 1,
-   Track 2, ... - the same numbering VLC uses).
-4. Type how many seconds to keep before and after each kill.
-5. Click "Scan video". Expect a few minutes per hour of footage.
-6. Check the list of kills. If needed, adjust the Fuzziness slider:
-     - move RIGHT if kills are being missed,
-     - move LEFT if it's finding things that aren't kills.
-   The list updates instantly - no need to scan again.
-7. Review the kills in the preview on the right:
-     - Click a kill (or use the up/down arrow keys) to see that moment.
-     - Click its box, or press Space, to leave it out (☐) or put it back (☑).
-       You can select several rows and press Space to toggle them together.
-     - "Check all", "Uncheck all" and "Uncheck below __%" do it in bulk.
-   Only ticked kills go into the Premiere sequence. Unticked kills stay
-   unticked when you move the slider.
-8. Click "Save XML sequence..." and save the .xml file.
-9. In Premiere: File > Import, choose the .xml. A new sequence appears,
-   already cut down to just the kills, using your original footage.
+1. Double-click "2 - Run Kill Clipper.bat" (or drag a video onto it).
+2. Drag your recording onto the window, or click Browse.
+   It opens in the player right away and plays normally until you scan.
+3. Pick the audio track you want to hear. This is also the track that goes
+   into the XML sequence.
+4. Set "Seconds before / after each kill", then click "Scan video".
+5. The timeline under the video now shows each kill clip in red.
+   Press Play and you'll see only the kills, back to back.
 
+PLAYER CONTROLS
+   Play / Pause .......... button, or the Space bar
+   Previous / Next kill .. buttons, or the Left / Right arrow keys.
+                           They jump to the start of the previous / next
+                           kill clip and don't change playing or paused.
+   Timeline .............. click a red kill section to jump to it.
+                           The grey parts between kills can't be clicked.
+   Volume ................ speaker button mutes (or press M); the slider
+                           sets the volume.
 
+   Changing the before/after seconds or the Fuzziness slider updates the
+   clips instantly. No need to scan again.
 
+   Kills close together are merged into one clip, so "Clip 3 of 10" can
+   contain more than one kill.
 
+FUZZINESS
+   Move RIGHT if kills are being missed, LEFT if it finds things that
+   aren't kills.
 
+SAVING FOR PREMIERE / RESOLVE
+   Click "Save XML sequence...".
+   Premiere: File > Import, pick the .xml.
+   Resolve:  File > Import > Timeline, pick the .xml.
 
-VIDEO EDITORS
--------------
-The .xml is in the Final Cut Pro 7 XML format, which Adobe Premiere and DaVinci Resolve can
-also import.
-
-
-TIPS
-----
-- You can also drag a video onto "2 - Run Kill Clipper.bat" (or onto
-  your shortcut) to open Kill Clipper with that video already loaded.
-- Kills close together are merged into one clip, so a double or triple kill
-  becomes one continuous clip instead of overlapping copies.
-- The preview window can be resized, and you can drag the divider between the
-  options and the preview. The picture scales to fit.
-- The detector expects the crosshair at the centre of the screen and the X
-  to be red. If a colour-blind or HUD colour setting changes its colour,
-  it won't be found.
-- Advanced: it also runs from the command line:
-    python kill_clipper.py VIDEO BEFORE AFTER FUZZINESS OUTPUT.xml [AUDIO_TRACK]
+IF THE VIDEO AREA SAYS THE PLAYER ISN'T INSTALLED
+   Click "Install video player" in the video area, or run the setup file
+   again. If the download can't be unpacked automatically, the downloaded
+   .7z file is saved in this folder: open it (Windows 11 opens .7z files;
+   on Windows 10 use 7-Zip) and copy libmpv-2.dll into this folder.
+   Manual download: https://github.com/shinchiro/mpv-winbuild-cmake/releases
+   (the file named mpv-dev-x86_64-DATE.7z, not the "v3" one).
+   To update the player later, delete libmpv-2.dll and run setup again.
