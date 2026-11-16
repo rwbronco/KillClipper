@@ -1,9 +1,31 @@
 # Kill Clipper
 
-![KillClipper](https://github.com/rwbronco/KillClipper/blob/main/Kill_Clipper-screenshot.png)
+![KillClipper](https://github.com/rwbronco/KillClipper/blob/main/Kill_Clipper2-screenshot.png)
 
 
-Kill Clipper is a small Windows app that cuts long Battlefield 6 gameplay recordings down to just the kills. Give it an .mp4 or .mkv, and it uses NumPy and FFmpeg to detect kill shots in your video. Save the result as a Final Cut Pro 7 XML file and Adobe Premiere Pro or DaVinci Resolve opens it as a ready-cut sequence linked to your original video. You can adjust the detection fuzziness, preview and exclude individual detections, change the clip duration before-and-after each kill, and it even handles multi-track audio! Kill Clipper runs on Python 3 using Tkinter (included with Python) for the window, plus two add-ons installed by the setup file: numpy for the image analysis, and imageio-ffmpeg, which supplies FFmpeg for reading video. It writes no temporary files; everything happens in memory.
+Kill Clipper is a small Windows app that cuts long Battlefield 6 gameplay recordings down to just the kills.
+
+Give it an .mp4 or .mkv, and it uses NumPy and FFmpeg to find every kill shot. A built-in player then plays your original video showing only the kills. Nothing is cut or re-saved.
+
+Features
+
+Kills-only playback: plays your original video and jumps over everything between kills.
+Kill timeline: every kill shows in red. Click one to jump to it.
+Previous / next buttons: skip from kill to kill, whether the video is playing or paused.
+Adjustable detection: change the fuzziness and how much of each clip plays before and after the kill. Playback updates instantly.
+Multi-track audio: pick the track you want to hear, set the volume or mute it.
+Export for editing: save the kills as a Final Cut Pro 7 XML file. Adobe Premiere Pro or DaVinci Resolve opens it as a ready-cut sequence linked to your original video.
+
+Requirements
+
+Python 3, with Tkinter (included with Python) for the window
+Installed by the setup file:
+numpy: image analysis
+imageio-ffmpeg: supplies FFmpeg for reading video
+py7zr: unpacks the video player download
+mpv video player (libmpv-2.dll)
+
+Scanning and playback write no temporary files; everything happens in memory.
 
 ============
 
