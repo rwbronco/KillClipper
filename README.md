@@ -29,14 +29,14 @@ Scanning and playback write no temporary files; everything happens in memory.
 
 ==============
 
-FIRST TIME
+## FIRST TIME
 1. Install Python from https://www.python.org/downloads/ (64-bit) and tick
    "Add python.exe to PATH" on the first installer screen.
 2. Double-click "1 - Setup (run once).bat". It installs three add-ons
    (numpy, imageio-ffmpeg, py7zr) and downloads the video player
    (libmpv-2.dll, about 30 MB) into this folder.
 
-USING IT
+## USING IT
 1. Double-click "2 - Run Kill Clipper.bat" (or drag a video onto it).
 2. Drag your recording onto the window, or click Browse.
    It opens in the player right away and plays normally until you scan.
@@ -46,32 +46,33 @@ USING IT
 5. The timeline under the video now shows each kill clip in red.
    Press Play and you'll see only the kills, back to back.
 
-PLAYER CONTROLS
-   Play / Pause .......... button, or the Space bar
-   Previous / Next kill .. buttons, or the Left / Right arrow keys.
-                           They jump to the start of the previous / next
-                           kill clip and don't change playing or paused.
-   Timeline .............. click a red kill section to jump to it.
-                           The grey parts between kills can't be clicked.
-   Volume ................ speaker button mutes (or press M); the slider
-                           sets the volume.
+## PLAYER CONTROLS
+Play / Pause
+- button, or the Space bar.
 
-   Changing the before/after seconds or the Fuzziness slider updates the
-   clips instantly. No need to scan again.
+Previous / Next kil
+- buttons, or the Left / Right arrow keys. They jump to the start of the previous / next kill clip and don't change playing or paused.
+                           
+Timeline
+- click a red kill section to jump to it. The grey parts between kills can't be clicked.
 
-   Kills close together are merged into one clip, so "Clip 3 of 10" can
-   contain more than one kill.
+Volume
+- speaker button mutes (or press M); the slider sets the volume.
 
-FUZZINESS
+Changing the before/after seconds or the Fuzziness slider updates the clips instantly. No need to scan again.
+
+Kills close together are merged into one clip, so "Clip 3 of 10" can contain more than one kill.
+
+## FUZZINESS
    Move RIGHT if kills are being missed, LEFT if it finds things that
    aren't kills.
 
-SAVING FOR PREMIERE / RESOLVE
-   Click "Save XML sequence...".
-   Premiere: File > Import, pick the .xml.
-   Resolve:  File > Import > Timeline, pick the .xml.
+## SAVING FOR PREMIERE / RESOLVE
+1. Click "Save XML sequence...".
+2. Premiere: File > Import, pick the .xml.
+3. Resolve:  File > Import > Timeline, pick the .xml.
 
-IF THE VIDEO AREA SAYS THE PLAYER ISN'T INSTALLED
+## IF THE VIDEO AREA SAYS THE PLAYER ISN'T INSTALLED
    Click "Install video player" in the video area, or run the setup file
    again. If the download can't be unpacked automatically, the downloaded
    .7z file is saved in this folder: open it (Windows 11 opens .7z files;
