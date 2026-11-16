@@ -27,14 +27,7 @@ mpv video player (libmpv-2.dll)
 
 Scanning and playback write no temporary files; everything happens in memory.
 
-============
-
-KILL CLIPPER 2
 ==============
-Finds every kill in a Battlefield 6 recording (.mp4 or .mkv) and plays the
-video back showing ONLY the kills. Nothing is cut or re-saved: it plays your
-original file and jumps over everything between kills. You can still save a
-Premiere / Resolve sequence (XML) whenever you want to edit.
 
 FIRST TIME
 1. Install Python from https://www.python.org/downloads/ (64-bit) and tick
